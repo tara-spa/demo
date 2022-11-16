@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>新宿の映画館｜映画のはしご</title>
+	<meta name="description" content="映画館のはしごサイト">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<header>
+	<div id="header">	
+		<img src="./img/logo.png" id="img-logo" alt="サイトロゴ" width="24px" height="24px">
+		<div id="site-name">映画スケジュール</div>
+	</div>
+<!--
+	<div id="breadcrumb">
+		<a href="./index.html">TOP</a> > <a href="./index.html">東京の映画館</a> > 新宿の映画館
+	</div>
+-->
+	<h1>新宿の映画館</h1>
+</header>
+
+<main>
+<section>
+	<label id="time">
+		<span id="time-text">日時：</span>
+		<input id="cal" type="datetime-local">
+	</label>
+</section>
+
+<section>
+	<label id="place">
+		<span id="place-text">場所：</span>
+		新宿
+	</label>
+</section>
+
+<section>
+<!--
+	<input id="b1" type="checkbox" class="ocbutton" checked="checked">映画館選択 <label for="b1"></label>
+-->
+	<ul id="cinema-list" class="cinema-list">
+		<li><button id="all" class="cinema-on" onclick="clickCinema('すべて');"><div class="cinema-a">すべて</div></button></li>
+		<li><button id="TOHOシネマズ新宿" class="cinema-off" onclick="clickCinema('TOHOシネマズ新宿');"><div class="cinema-a">TOHOシネマズ新宿</div></button></li>
+		<li><button id="新宿ピカデリー" class="cinema-off" onclick="clickCinema('新宿ピカデリー');"><div class="cinema-a">新宿ピカデリー</div></button></li>
+		<li><button id="テアトル新宿" class="cinema-off" onclick="clickCinema('テアトル新宿');"><div class="cinema-a">テアトル新宿</div></button></li>
+		<li><button id="新宿武蔵野館" class="cinema-off" onclick="clickCinema('新宿武蔵野館');"><div class="cinema-a">新宿武蔵野館</div></button></li>
+		<li><button id="EJアニメシアター新宿" class="cinema-off" onclick="clickCinema('EJアニメシアター新宿');"><div class="cinema-a">EJアニメシアター新宿</div></button></li>
+		<li><button id="シネマート新宿" class="cinema-off" onclick="clickCinema('シネマート新宿');"><div class="cinema-a">シネマート新宿</div></button></li>
+		<li><button id="K's cinema" class="cinema-off" onclick="clickCinema('K&rsquo;s cinema');"><div class="cinema-a">K's cinema</div></button></li>
+		<li><button id="新宿シネマカリテ" class="cinema-off" onclick="clickCinema('新宿シネマカリテ');"><div class="cinema-a">新宿シネマカリテ</div></button></li>
+		<li><button id="新宿バルト9" class="cinema-off" onclick="clickCinema('新宿バルト9');"><div class="cinema-a">新宿バルト9</div></button></li>
+	</ul>
+</section>
+
+<section>
+<!--
+	<input id="b0" type="checkbox" class="ocbutton" checked="checked"> <label for="b0"></label>	
+-->
+	<ul id="title-list" class="title-list">
+		<li><button id="すべて" class="title-on" onclick="clickTitle('すべて');"><div class="tittle-a">すべて</div></button></li>
+		<li><button id="劇場版 呪術廻戦0" class="title-off" onclick="clickTitle('劇場版 呪術廻戦0');"><div class="tittle-a">劇場版 呪術廻戦0</div></button></li>
+		<li><button id="ウエスト・サイド・ストーリー" class="title-off" onclick="clickTitle('ウエスト・サイド・ストーリー');"><div class="tittle-a">ウエスト・サイド・ストーリー</div></button></li>
+		<li><button id="嘘喰い" class="title-off" onclick="clickTitle('嘘喰い');"><div class="tittle-a">嘘喰い</div></button></li>
+		<li><button id="コンフィデンスマンJP 英雄編" class="title-off" onclick="clickTitle('コンフィデンスマンJP 英雄編');"><div class="tittle-a">コンフィデンスマンJP 英雄編</div></button></li>
+		<li><button id="スパイダーマン ノー・ウェイ・ホーム" class="title-off" onclick="clickTitle('スパイダーマン ノー・ウェイ・ホーム');"><div class="tittle-a">スパイダーマン ノー・ウェイ・ホーム</div></button></li>
+		<li><button id="フレンチ・ディスパッチ ザ・リバティ、カンザス・イヴニング・サン別冊" class="title-off" onclick="clickTitle('フレンチ・ディスパッチ ザ・リバティ、カンザス・イヴニング・サン別冊');"><div class="tittle-a">フレンチ・ディスパッチ ザ・リバティ、カンザス・イヴニング・サン別冊</div></button></li>
+		<li><button id="真夜中乙女戦争" class="title-off" onclick="clickTitle('真夜中乙女戦争');"><div class="tittle-a">真夜中乙女戦争</div></button></li>
+		<li><button id="鹿の王 ユナと約束の旅" class="title-off" onclick="clickTitle('鹿の王 ユナと約束の旅');"><div class="tittle-a">鹿の王 ユナと約束の旅</div></button></li>
+		<li><button id="コーダ あいのうた" class="title-off" onclick="clickTitle('コーダ あいのうた');"><div class="tittle-a">コーダ あいのうた</div></button></li>
+		<li><button id="ゴーストバスターズ アフターライフ" class="title-off" onclick="clickTitle('ゴーストバスターズ アフターライフ');"><div class="tittle-a">ゴーストバスターズ アフターライフ</div></button></li>
+		<li><button id="３５５" class="title-off" onclick="clickTitle('３５５');"><div class="tittle-a">３５５</div></button></li>
+		<li><button id="バイオハザード：ウェルカム・トゥ・ラクーンシティ" class="title-off" onclick="clickTitle('バイオハザード：ウェルカム・トゥ・ラクーンシティ');"><div class="tittle-a">バイオハザード：ウェルカム・トゥ・ラクーンシティ</div></button></li>
+		<li><button id="ノイズ" class="title-off" onclick="clickTitle('ノイズ');"><div class="tittle-a">ノイズ</div></button></li>
+		<li><button id="前科者" class="title-off" onclick="clickTitle('前科者');"><div class="tittle-a">前科者</div></button></li>
+		<li><button id="ハウス・オブ・グッチ" class="title-off" onclick="clickTitle('ハウス・オブ・グッチ');"><div class="tittle-a">ハウス・オブ・グッチ</div></button></li>
+		<li><button id="ドライブ・マイ・カー" class="title-off" onclick="clickTitle('ドライブ・マイ・カー');"><div class="tittle-a">ドライブ・マイ・カー</div></button></li>
+		<li><button id="スタンド・バイ・ミー" class="title-off" onclick="clickTitle('スタンド・バイ・ミー');"><div class="tittle-a">スタンド・バイ・ミー</div></button></li>
+		<li><button id="ザ・ビートルズ GET BACK：ルーフトップ・コンサート" class="title-off" onclick="clickTitle('ザ・ビートルズ GET BACK：ルーフトップ・コンサート');"><div class="tittle-a">ザ・ビートルズ GET BACK：ルーフトップ・コンサート</div></button></li>
+		<li><button id="Still Dreamin ～布袋寅泰情熱と栄光のギタリズム～" class="title-off" onclick="clickTitle('Still Dreamin ～布袋寅泰情熱と栄光のギタリズム～');"><div class="tittle-a">Still Dreamin ～布袋寅泰情熱と栄光のギタリズム～</div></button></li>
+	</ul>
+</section>
+
+
+<section class="timeschedule" id="timeschedule">
+<div id="timeschedule2"></div>
+<!--
+<button class="eiga-block" id="eiga-block">
+	<div class="aaaa">
+		<div class="eiga-time" id="eiga-time">9:20～12:10</div>
+		<div class="eiga-name" id="eiga-name">ウエスト・サイド・ストーリー</div>
+		<div class="eiga-eirin">
+			<span class="options2" id="eiga-eirin">PG12</span>
+		</div>
+	</div>
+	<div class="bbbb">
+		<div class="eiga-option">
+			<span class="options" id="eiga-option">IMAXレーザー</span>
+			<span class="options" id="eiga-option">字幕</span>
+		</div>
+		<div class="eiga-theater" id="eiga-theater">TOHOシネマズ新宿 SCREEN10</div>
+	</div>
+</button>
+-->
+</section>
+
+</main>
+
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
+
