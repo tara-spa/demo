@@ -92,7 +92,7 @@
 		background-color: white;
 		color: black;
 		border: 0px solid #888888;
-		border-bottom: .5px solid #888888;
+		border-bottom: 1px solid #888888;
 		width: 100%;
 		height: auto;
 		display: inline-block;
@@ -105,7 +105,7 @@
 		background-color: white;
 		color: crimson;
 		border: 0px solid #888888;
-		border-bottom: .5px solid #888888;
+		border-bottom: 1px solid #888888;
 		width: 100%;
 		height: auto;
 		display: inline-block;
@@ -117,7 +117,7 @@
 		background-color: #eeeeee;
 		color: #888888;
 		border: 0px solid #888888;
-		border-bottom: .5px solid #888888;
+		border-bottom: 1px solid #888888;
 		width: 100%;
 		height: auto;
 		display: inline-block;
