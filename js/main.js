@@ -188,8 +188,10 @@ function viewList(newTitle) {
 							//console.log(i);
 							//console.log(document.getElementById('eiga-block-'+i));
 							if(flag == 1){
+								document.getElementById('eiga-block-'+i).style.display = "none";
 								document.getElementById('eiga-block-'+i).className = "eiga-block3"
 							}else{
+								document.getElementById('eiga-block-'+i).style.display = "";
 								document.getElementById('eiga-block-'+i).className = "eiga-block"
 							}
 						}

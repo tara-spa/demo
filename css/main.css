@@ -44,6 +44,7 @@
 		//display: none;
 	}
 	.title-list li{
+		padding:2px;
 		border-bottom: 0.5px dashed #666666;
 	}
 	button.title-on{
